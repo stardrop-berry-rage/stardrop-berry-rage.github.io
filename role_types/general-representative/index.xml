@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>General Representative on Rage for ANUSA</title>
-    <link>stardrop-berry-rage.github.io/role_types/general-representative/</link>
+    <link>/role_types/general-representative/</link>
     <description>Recent content in General Representative on Rage for ANUSA</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Aug 2025 23:25:31 +1000</lastBuildDate>
-    <atom:link href="stardrop-berry-rage.github.io/role_types/general-representative/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/role_types/general-representative/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Robin</title>
-      <link>stardrop-berry-rage.github.io/candidates/robin/</link>
+      <link>/candidates/robin/</link>
       <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
-      <guid>stardrop-berry-rage.github.io/candidates/robin/</guid>
+      <guid>/candidates/robin/</guid>
       <description>&lt;p&gt;My name is Robin, and I believe in a student union that delivers real results. For too long, students have been told to accept things the way they are. I&amp;rsquo;m running to be your General Representative and NUS Delegate because I want to work constructively to make student life better and more affordable, not just talk about it.&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s about focusing on the practical issues that affect us every day. I&amp;rsquo;m committed to fighting for a campus that is more supportive, more accessible, and more focused on you.&lt;/p&gt;</description>
     </item>
   </channel>
