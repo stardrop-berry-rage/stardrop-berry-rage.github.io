@@ -37,13 +37,13 @@ jobs:
 
       - name: Build Hugo site
         run: |
-          hugo --source rage-for-anusa --themesDir themes --minify
+          hugo build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # The build output will be in rage-for-anusa/public
-          path: './rage-for-anusa/public'
+          path: './public'
 
   # Deployment job
   deploy:
