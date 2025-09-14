@@ -1,19 +1,103 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>College Representative on Rage for ANUSA</title>
+    <title>College Representative on RAGE for ANUSA</title>
     <link>/role_types/college-representative/</link>
-    <description>Recent content in College Representative on Rage for ANUSA</description>
+    <description>Recent content in College Representative on RAGE for ANUSA</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Aug 2025 23:25:31 +1000</lastBuildDate>
     <atom:link href="/role_types/college-representative/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Collage McCollageface</title>
-      <link>/candidates/collage/</link>
+      <title>Abigail McCarrol</title>
+      <link>/candidates/abigail/</link>
       <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
-      <guid>/candidates/collage/</guid>
-      <description>&lt;h2 id=&#34;key-policies&#34;&gt;Key Policies&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Policy 1&lt;/li&gt;&#xA;&lt;li&gt;Policy 2&lt;/li&gt;&#xA;&lt;li&gt;Policy 3&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <guid>/candidates/abigail/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ajit Singh</title>
+      <link>/candidates/ajit/</link>
+      <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
+      <guid>/candidates/ajit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Darcy Oates</title>
+      <link>/candidates/darcy/</link>
+      <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
+      <guid>/candidates/darcy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dylan Ek</title>
+      <link>/candidates/dylan-ek/</link>
+      <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
+      <guid>/candidates/dylan-ek/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ella Gill</title>
+      <link>/candidates/ella/</link>
+      <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
+      <guid>/candidates/ella/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jess Hayhoe</title>
+      <link>/candidates/jess/</link>
+      <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
+      <guid>/candidates/jess/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jessica Prakash</title>
+      <link>/candidates/jessica/</link>
+      <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
+      <guid>/candidates/jessica/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lauren Hope-Johnson</title>
+      <link>/candidates/lauren/</link>
+      <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
+      <guid>/candidates/lauren/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Noah McMillan</title>
+      <link>/candidates/noah/</link>
+      <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
+      <guid>/candidates/noah/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oscar Greenfield</title>
+      <link>/candidates/oscar/</link>
+      <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
+      <guid>/candidates/oscar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rifah Tasnia Purbita</title>
+      <link>/candidates/rifah/</link>
+      <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
+      <guid>/candidates/rifah/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Siddarth Nair</title>
+      <link>/candidates/siddarth/</link>
+      <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
+      <guid>/candidates/siddarth/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Suriana Mamone</title>
+      <link>/candidates/suriana/</link>
+      <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
+      <guid>/candidates/suriana/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

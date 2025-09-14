@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Role_types on Rage for ANUSA</title>
+    <title>Role_types on RAGE for ANUSA</title>
     <link>/role_types/</link>
-    <description>Recent content in Role_types on Rage for ANUSA</description>
+    <description>Recent content in Role_types on RAGE for ANUSA</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Aug 2025 23:25:31 +1000</lastBuildDate>
@@ -44,11 +44,18 @@
       <description>&lt;p&gt;NUS Delegates represent ANU students at the National Union of Students, coordinating national campaigns and lobbying for student rights.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Academic Representative</title>
+      <title>Officers</title>
+      <link>/role_types/officers/</link>
+      <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
+      <guid>/role_types/officers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Officers</title>
       <link>/role_types/academic-representative/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/role_types/academic-representative/</guid>
-      <description>&lt;p&gt;Academic Representatives focus on improving the academic experience for all students, working with faculties to ensure fair assessment and strong support.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Officers include both academic and non-academic roles who deliver services and support for students across ANUSA.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
