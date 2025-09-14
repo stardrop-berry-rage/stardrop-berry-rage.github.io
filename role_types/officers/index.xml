@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Officers on RAGE for ANUSA</title>
-    <link>stardrop-berry-rage.github.io/role_types/officers/</link>
+    <link>https://stardrop-berry-rage.github.io/role_types/officers/</link>
     <description>Recent content in Officers on RAGE for ANUSA</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Aug 2025 23:25:31 +1000</lastBuildDate>
-    <atom:link href="stardrop-berry-rage.github.io/role_types/officers/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://stardrop-berry-rage.github.io/role_types/officers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ankith Arun Aswath</title>
-      <link>stardrop-berry-rage.github.io/candidates/ankith/</link>
+      <link>https://stardrop-berry-rage.github.io/candidates/ankith/</link>
       <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
-      <guid>stardrop-berry-rage.github.io/candidates/ankith/</guid>
+      <guid>https://stardrop-berry-rage.github.io/candidates/ankith/</guid>
       <description></description>
     </item>
     <item>
       <title>Chith Weliamuna</title>
-      <link>stardrop-berry-rage.github.io/candidates/chith/</link>
+      <link>https://stardrop-berry-rage.github.io/candidates/chith/</link>
       <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
-      <guid>stardrop-berry-rage.github.io/candidates/chith/</guid>
+      <guid>https://stardrop-berry-rage.github.io/candidates/chith/</guid>
       <description></description>
     </item>
     <item>
       <title>Flynn Wade-Schneiders</title>
-      <link>stardrop-berry-rage.github.io/candidates/flynn/</link>
+      <link>https://stardrop-berry-rage.github.io/candidates/flynn/</link>
       <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
-      <guid>stardrop-berry-rage.github.io/candidates/flynn/</guid>
+      <guid>https://stardrop-berry-rage.github.io/candidates/flynn/</guid>
       <description></description>
     </item>
     <item>
       <title>Kamal Hassan</title>
-      <link>stardrop-berry-rage.github.io/candidates/kamal/</link>
+      <link>https://stardrop-berry-rage.github.io/candidates/kamal/</link>
       <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
-      <guid>stardrop-berry-rage.github.io/candidates/kamal/</guid>
+      <guid>https://stardrop-berry-rage.github.io/candidates/kamal/</guid>
       <description></description>
     </item>
   </channel>

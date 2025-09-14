@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ANU Council on RAGE for ANUSA</title>
-    <link>stardrop-berry-rage.github.io/role_types/anu-council/</link>
+    <link>https://stardrop-berry-rage.github.io/role_types/anu-council/</link>
     <description>Recent content in ANU Council on RAGE for ANUSA</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Aug 2025 23:25:31 +1000</lastBuildDate>
-    <atom:link href="stardrop-berry-rage.github.io/role_types/anu-council/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://stardrop-berry-rage.github.io/role_types/anu-council/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Charley Ellwood</title>
-      <link>stardrop-berry-rage.github.io/candidates/charley/</link>
+      <link>https://stardrop-berry-rage.github.io/candidates/charley/</link>
       <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
-      <guid>stardrop-berry-rage.github.io/candidates/charley/</guid>
+      <guid>https://stardrop-berry-rage.github.io/candidates/charley/</guid>
       <description></description>
     </item>
     <item>
       <title>Kamal Hassan</title>
-      <link>stardrop-berry-rage.github.io/candidates/kamal/</link>
+      <link>https://stardrop-berry-rage.github.io/candidates/kamal/</link>
       <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
-      <guid>stardrop-berry-rage.github.io/candidates/kamal/</guid>
+      <guid>https://stardrop-berry-rage.github.io/candidates/kamal/</guid>
       <description></description>
     </item>
   </channel>
