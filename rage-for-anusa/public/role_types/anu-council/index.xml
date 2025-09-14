@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ANU Council on RAGE for ANUSA</title>
+    <link>/role_types/anu-council/</link>
+    <description>Recent content in ANU Council on RAGE for ANUSA</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Aug 2025 23:25:31 +1000</lastBuildDate>
+    <atom:link href="/role_types/anu-council/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Charley Ellwood</title>
+      <link>/candidates/charley/</link>
+      <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
+      <guid>/candidates/charley/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kamal Hassan</title>
+      <link>/candidates/kamal/</link>
+      <pubDate>Sun, 10 Aug 2025 23:25:31 +1000</pubDate>
+      <guid>/candidates/kamal/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

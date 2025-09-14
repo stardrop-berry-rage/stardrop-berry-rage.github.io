@@ -1,0 +1,35 @@
+<header class="site-header">
+    <div class="container">
+    <a class="ticket-name" href="{{ .Site.BaseURL }}" aria-label="{{ .Site.Params.ticket_name }}">
+      <img class="site-logo" 
+     src="/images/logos/3.png" 
+     alt="{{ .Site.Params.ticket_name }} logo"
+     height="48"
+     style="height:auto; max-height:100px; width:auto;" />
+
+    </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="topnav">Menu</button>
+
+        <nav class="top-nav" id="topnav">
+          <ul>
+            {{ $shortNames := dict "General Representative" "General Reps" "Officers" "Officers" "College Representative" "College Reps" "ANU Council" "ANU Council" "NUS Delegate" "NUS Delegates" "Executive" "Executive" }}
+            {{ $order := cond (isset site.Home.Params "role_order") site.Home.Params.role_order (slice "Executive" "General Representative" "Officers" "College Representative" "ANU Council" "NUS Delegate") }}
+            {{ range $order }}
+              {{ $name := . }}
+              {{ $termPage := site.GetPage (printf "/role_types/%s" (urlize $name)) }}
+              <li class="dropdown">
+                <a href="/role_types/{{ $name | urlize }}/" class="dropbtn">{{ index $shortNames $name }}</a>
+                <div class="dropdown-content" role="menu">
+                  {{ if $termPage }}
+                    {{ range sort $termPage.Pages "Title" }}
+                      <a href="{{ .Permalink }}" role="menuitem">{{ .Title }}</a>
+                    {{ end }}
+                  {{ end }}
+                </div>
+              </li>
+            {{ end }}
+          </ul>
+        </nav>
+    </div>
+  
+</header>

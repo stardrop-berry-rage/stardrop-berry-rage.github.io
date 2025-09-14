@@ -1,0 +1,151 @@
+{{ define "main" }}
+<header class="page-hero" style="text-align:center;">
+  <div style="position:relative;display:flex;justify-content:center;align-items:center;margin-bottom:1.2rem;">
+    <div style="position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);height:140px;z-index:0;
+                background:linear-gradient(90deg,rgba(255,255,255,0.95) 0%,rgba(255,255,255,0.7) 18%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.7) 82%,rgba(255,255,255,0.95) 100%);
+                border-radius:70px;filter:blur(0.5px);"></div>
+
+    <img class="hero-logo" src="/images/logos/1.png" alt="RAGE for ANUSA logo" style="max-width:220px;width:100%;height:auto;position:relative;z-index:1;" />
+  </div>
+
+  <!-- Voting info box directly under logo -->
+  <section class="voting-info" style="max-width:540px;margin:0 auto 1.6rem auto;text-align:center;">
+    <div class="voting-box" id="countdown-box">
+      <div class="voting-title">Voting is open 22–25 September 2025.</div>
+
+      <!-- FIXED anchor here -->
+      <div class="voting-desc">All ANU students can vote online at <a href="https://voteanusa.com" target="_blank" rel="noopener">voteanusa.com.</a></div>
+
+      <div class="voting-countdown" aria-live="polite">
+        <span id="countdown-label">Voting opens in:</span>
+        <span id="countdown-timer" aria-hidden="false" role="status"></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="hero-ctas" style="justify-content:center;">
+    <a class="button button-primary" href="#policies">Our plan</a>
+    <a class="button" href="#team">Meet the team</a>
+  </div>
+</header>
+
+
+  <section id="policies" class="policy-section">
+    <h2 class="section-title">Our plan for ANUSA</h2>
+    {{ with site.Home.Params.policies }}
+      <div class="policy-scroller">
+        {{ range . }}
+          <article class="policy-card">
+            <h3>{{ .title | default (index . "title") }}</h3>
+            <p>{{ .summary | default (index . "summary") }}</p>
+          </article>
+        {{ end }}
+      </div>
+    {{ end }}
+  </section>
+
+  <section id="team" class="team-section">
+    <h2 class="section-title">Meet the team</h2>
+
+  {{ $order := cond (isset site.Home.Params "role_order") site.Home.Params.role_order (slice "Executive" "General Representative" "Officers" "College Representative" "ANU Council" "NUS Delegate") }}
+    {{ range $order }}
+      {{ $name := . }}
+      {{ $termPage := site.GetPage (printf "/role_types/%s" (urlize $name)) }}
+      {{ if and $termPage (gt (len $termPage.Pages) 0) }}
+        <div class="role-group">
+          <h3 class="role-title">{{ $name }}</h3>
+          {{ $desc := index $.Site.Data.roles $name }}
+          {{ with $desc }}<p class="lede">{{ . }}</p>{{ end }}
+          <div class="grid">
+            {{ range sort $termPage.Pages "Title" }}
+              <article class="card">
+                <a class="card-media" href="{{ .Permalink }}" aria-label="Read {{ .Title }} policies">
+                  {{ with .Params.photo }}
+                    <img src="{{ . }}" alt="Photo of {{ $.Title }}" loading="lazy" />
+                  {{ else }}
+                    <div class="img-placeholder" aria-hidden="true"></div>
+                  {{ end }}
+                </a>
+                <div class="card-body">
+                  <h4 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                  {{ with .Params.position }}
+                    <p class="muted">{{ . }}</p>
+                  {{ end }}
+                  {{ with .Params.role_types }}
+                    <div class="badges">
+                      {{ range . }}<span class="badge">{{ . }}</span>{{ end }}
+                    </div>
+                  {{ end }}
+                  <a class="button button-primary" href="{{ .Permalink }}">View policies</a>
+                </div>
+              </article>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+  </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const countdownLabel = document.getElementById('countdown-label');
+    const countdownTimer = document.getElementById('countdown-timer');
+
+    // --- Configuration ---
+    // Times are set in UTC to be accurate for all users.
+    // AEST is UTC+10. Daylight saving (AEDT) is not in effect in September.
+
+    // Voting Opens: Monday 22 Sep 2025, 9:00 AM AEST (UTC+10)
+    // This is equivalent to 23:00 UTC on the 21st of September.
+    const votingOpenDate = new Date(Date.UTC(2025, 8, 21, 23, 0, 0)); 
+
+    // Voting Closes: Thursday 25 Sep 2025, 12:00 PM (Noon) AEST (UTC+10)
+    // This is equivalent to 02:00 UTC on the 25th of September.
+    const votingCloseDate = new Date(Date.UTC(2025, 8, 25, 2, 0, 0));
+
+    function updateCountdown() {
+      const now = new Date();
+      let targetDate;
+      
+      // 1. Before voting opens
+      if (now < votingOpenDate) {
+        countdownLabel.textContent = 'Voting opens in:';
+        targetDate = votingOpenDate;
+      
+      // 2. During voting period
+      } else if (now >= votingOpenDate && now < votingCloseDate) {
+        countdownLabel.textContent = 'Voting closes in:';
+        targetDate = votingCloseDate;
+
+      // 3. After voting has closed
+      } else {
+        countdownLabel.textContent = 'Voting has closed.';
+        countdownTimer.textContent = '';
+        clearInterval(countdownInterval); // Stop the timer
+        return;
+      }
+
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        // This case handles the moment the state changes, so we re-run the logic.
+        updateCountdown();
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      // Format the output string
+      countdownTimer.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    // Run the function once immediately, then every second.
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown(); 
+  });
+</script>
+
+{{ end }}

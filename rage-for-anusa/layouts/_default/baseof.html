@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="{{ .Site.Params.primary_color | default "#0b0b0f" }}" />
+    <link rel="canonical" href="{{ .Permalink }}" />
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+
+    {{ partial "seo.html" . }}
+
+    <!-- Google Fonts from config -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="{{ .Site.Params.google_fonts_url }}" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Dynamic CSS Variables for Branding -->
+    <style>
+      :root {
+        --primary-color: {{ .Site.Params.primary_color | default "#0b0b0f" }};
+        --secondary-color: {{ .Site.Params.secondary_color | default "#ffffff" }};
+        --accent-color: {{ .Site.Params.accent_color | default "#ff3366" }};
+        --logo-font: '{{ .Site.Params.logo_font | default "Anton" }}', sans-serif;
+        --body-font: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        --radius: 14px;
+        --radius-sm: 10px;
+        --shadow-1: 0 8px 24px rgba(0,0,0,.25);
+        --shadow-2: 0 2px 10px rgba(0,0,0,.2);
+        --container-w: 1200px;
+      }
+    </style>
+</head>
+<body class="theme-dark">
+    {{ partial "header.html" . }}
+
+    <main class="container">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; {{ now.Year }} {{ .Site.Params.ticket_name }}.</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+</body>
+</html>
