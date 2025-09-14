@@ -1,4 +1,4 @@
-#baseURL = "stardrop-berry-rage.github.io"
+baseURL = "stardrop-berry-rage.github.io"
 languageCode = "en-us"
 title = "RAGE for ANUSA"
 # theme = "anusa-campaign" # You can name your theme anything
