@@ -17,6 +17,9 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Ensure all images never overflow their containers */
+img { max-width: 100%; height: auto; display: block; }
+
 body.theme-dark {
   background-color: #000000 !important;
   color: #ffffff !important;
@@ -64,6 +67,44 @@ main {
   min-height: calc(100vh - var(--header-height));
   padding: 2rem 0;
 }
+
+/* =========================
+   Buttons & CTAs
+   ========================= */
+
+.button {
+  display: inline-block;
+  padding: 0.72rem 1.15rem;
+  border-radius: 10px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,.28);
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  transition: all .18s ease-in-out;
+}
+.button:hover,
+.button:focus-visible {
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.42);
+  transform: translateY(-1px);
+}
+.button-primary {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #fff;
+}
+.button-primary:hover,
+.button-primary:focus-visible {
+  background: #e02e5c;
+  border-color: #e02e5c;
+}
+.hero-ctas { display: flex; gap: .8rem; justify-content: center; margin-top: 1rem; }
+
+/* Visible link color inside white countdown */
+.voting-box a { color: #0057cc; font-weight: 800; text-decoration: underline; }
+.voting-box a:hover { color: #003ea1; }
 
 /* =========================
    Hero Section
@@ -447,8 +488,8 @@ main {
 .lede { color: #cfcfcf; margin: 0 0 1rem; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
 .card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
-.card-media { display: block; }
-.card-media img { display: block; width: 100%; height: 200px; object-fit: cover; }
+.card-media { display: block; position: relative; overflow: hidden; aspect-ratio: 4 / 3; }
+.card-media img { width: 100%; height: 100%; object-fit: cover; }
 .img-placeholder { height: 200px; background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.14)); }
 .card-body { padding: 0.9rem 1rem 1.1rem; display: flex; flex-direction: column; gap: .4rem; }
 .card-title { margin: 0; font-size: 1.05rem; }
@@ -456,3 +497,40 @@ main {
 .muted { color: #c4c4c4; font-size: .9rem; }
 .badges { display: flex; flex-wrap: wrap; gap: .4rem; margin: .2rem 0 .4rem; }
 .badge { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: .15rem .45rem; border-radius: 999px; font-size: .78rem; }
+
+/* =========================
+   Candidate single page layout
+   ========================= */
+
+.candidate-single .candidate-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.candidate-single .candidate-aside {
+  position: sticky;
+  top: calc(var(--header-height) + 16px);
+  align-self: start;
+}
+
+.candidate-single .candidate-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.candidate-single .candidate-aside .badges {
+  margin-top: .75rem;
+}
+
+@media (max-width: 900px) {
+  .candidate-single .candidate-layout {
+    grid-template-columns: 1fr;
+  }
+  .candidate-single .candidate-aside {
+    position: static;
+  }
+}
