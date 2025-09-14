@@ -1,3 +1,261 @@
+/* =========================
+   Base Styles & Reset
+   ========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
+  background-color: #000000;
+  overflow-x: hidden;
+}
+
+body.theme-dark {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* =========================
+   Typography
+   ========================= */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cccccc;
+}
+
+/* =========================
+   Main Layout
+   ========================= */
+
+main {
+  min-height: calc(100vh - var(--header-height));
+  padding: 2rem 0;
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+
+.hero-section {
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+}
+
+.hero-logo {
+  margin: 0 auto 2rem;
+  display: block;
+}
+
+.white-fade-banner {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   Cards and Grid Layout
+   ========================= */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+
+.card h3 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #cccccc;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* =========================
+   Candidate Cards
+   ========================= */
+
+.candidate-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.candidate-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+
+.candidate-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.candidate-card h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.candidate-card .role {
+  color: #cccccc;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* =========================
+   Section Headings
+   ========================= */
+
+.section-heading, .section-title {
+  text-align: center;
+  margin: 3rem 0 2rem;
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.section-heading h2, .section-title {
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-heading p {
+  color: #cccccc;
+  font-size: 1.1rem;
+}
+
+/* =========================
+   Policy Section
+   ========================= */
+
+.policy-section {
+  padding: 3rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.policy-scroller {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.policy-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.policy-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+
+.policy-card h3 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.policy-card p {
+  color: #cccccc;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* =========================
+   Team Section
+   ========================= */
+
+.team-section {
+  padding: 3rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* Voting info box styles */
 .voting-box {
   display: inline-block;
@@ -131,6 +389,33 @@
   background: rgba(255,255,255,.08);
 }
 
+/* Dropdowns */
+.top-nav .dropdown { position: relative; }
+.top-nav .dropbtn { display: inline-block; }
+.top-nav .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0,0,0,0.9);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  min-width: 220px;
+  padding: .4rem;
+  box-shadow: var(--shadow-2);
+  z-index: 99;
+}
+.top-nav .dropdown-content a {
+  display: block;
+  padding: .45rem .6rem;
+  border-radius: 8px;
+  color: var(--secondary-color);
+}
+.top-nav .dropdown-content a:hover {
+  background: rgba(255,255,255,.08);
+}
+.top-nav .dropdown:hover .dropdown-content { display: block; }
+
 /* Mobile nav toggle */
 .nav-toggle {
   display: none;
@@ -152,3 +437,22 @@
     padding-top: .6rem 
   }
 }
+
+/* =========================
+   Grid and cards used in team section
+   ========================= */
+
+.role-group { margin: 2.5rem 0; }
+.role-title { font-size: 1.6rem; margin-bottom: .25rem; }
+.lede { color: #cfcfcf; margin: 0 0 1rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+.card-media { display: block; }
+.card-media img { display: block; width: 100%; height: 200px; object-fit: cover; }
+.img-placeholder { height: 200px; background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.14)); }
+.card-body { padding: 0.9rem 1rem 1.1rem; display: flex; flex-direction: column; gap: .4rem; }
+.card-title { margin: 0; font-size: 1.05rem; }
+.card-title a { color: #fff; text-decoration: none; }
+.muted { color: #c4c4c4; font-size: .9rem; }
+.badges { display: flex; flex-wrap: wrap; gap: .4rem; margin: .2rem 0 .4rem; }
+.badge { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: .15rem .45rem; border-radius: 999px; font-size: .78rem; }
