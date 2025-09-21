@@ -1,0 +1,14 @@
+{{ $title := .Title | default .Site.Title }}
+{{ $desc := .Description | default .Site.Params.description }}
+{{ $image := (or .Params.photo (or .Params.image "/images/charley.jpg")) }}
+<meta name="description" content="{{ $desc }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $desc }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:image" content="{{ $image | absURL }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $desc }}" />
+<meta name="twitter:image" content="{{ $image | absURL }}" />
